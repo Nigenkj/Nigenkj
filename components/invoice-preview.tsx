@@ -44,8 +44,8 @@ export function InvoicePreview({ invoiceData }: InvoicePreviewProps) {
 
   const paymentInfo = `Payment Info:
 Account Name: Nigel Agordorku
-Payment Type: Telecel Cash
-Momo Number: 020 584 0240
+Payment Type: MTN Momo
+Momo Number: 0599409528
 
 or
 
