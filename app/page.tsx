@@ -92,6 +92,19 @@ export default function InvoiceGenerator() {
   })
 
   useEffect(() => {
+    // Load saved invoice data on component mount
+    const savedData = localStorage.getItem("invoiceData")
+    if (savedData) {
+      try {
+        setInvoiceData(JSON.parse(savedData))
+      } catch (error) {
+        console.error("Error loading invoice data:", error)
+      }
+    }
+  }, [])
+
+  useEffect(() => {
+    // Save invoice data whenever it changes
     localStorage.setItem("invoiceData", JSON.stringify(invoiceData))
   }, [invoiceData])
 
